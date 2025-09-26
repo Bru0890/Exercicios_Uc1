@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*A Martis Informática é uma loja que comercializa os seguintes produtos:
+
+Código                    Nome                          Preço
+10                         Pen Drive 64GB               R$ 40,00
+11                         Power Bank 200000            R$ 150,00
+12                         Mouse                        R$ 15,00
+13                         Teclado                      R$ 35,00
+14                         MousePad                     R$ 20,00
+
+A empresa precisa de um programa em que o usuário informará o códgo do produto e a quantidade.
+Agora coloque a leitura em um loop e solicite ao usuário se ele deseja continuar cadastrando.
+O programa informará o total da compra.
+*/
+
+let cod = 0;
+let qtde = 0;
+let qtdeTotal = 0;
+let total = 0;
+
+while (true){
+let cod = parseInt(prompt("Código do produto"));
+        let qtde = parseInt(prompt("Quantidade"));
+        switch (cod){
+            case 10:
+                total = qtde * 40;
+                break;
+                case 11:
+                    total = qtde * 150;
+                    break;
+                    case 12:
+                        total = qtde * 15
+                        case 13:
+                    total = qtde * 35;
+                    break;
+                    case 14:
+                    total = qtde * 20;
+                    break;
+
+        }
+        let r = prompt("Deseja continuar? (s/n)")
+        if (r.substring(0,1).toLowerCase() == 'n'){
+            break;
+
+        }
+    }
+    alert("O valor da compra é: " + total);
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        let n1 = parseInt(prompt("Informe um número"));
+        let n2 = parseInt(prompt("Informe outro número"));
+        let soma = n1 + n2;
+        alert("A soma é: " + soma);
+        */
+
+        let n1 = 0;
+        let n2 = 0;
+        function coletar() {
+            n1 = lerNumero("n1")
+            n2 = lerNumero("n2")
+        }
+
+        function lerNumero(campo) {
+            let valor = document.getElementById(campo).value;
+            let numero = valor.replace('.', '');
+           numero = valor.replace(',', ".");
+
+           return parseFloat(numero);
+
+        }
+
+         function somar () {
+            coletar();
+            let soma = n1 + n2;
+
+            //alert("A soma é " + soma);
+            //alert();
+            //alert(n2);
+            saida(soma);
+            
+            }
+
+        function saida (parametro) {
+            let result = document.getElementById("resultado");
+            result.innerHTML = "<p>O resultado é " + parametro;
+
+            }
+
+        function subtrair () {
+            coletar();
+            let diferenca = n1 - n2;
+
+            saida(diferenca);
+
+            }
+
+           //alert ("O resultado é " + diferença); (As funções já form declradas por isso se excluiu este "alert")
+
+        function multiplicar () {
+            coletar();
+            let produto = n1 * n2;
+            
+            saida(produto);
+
+            }
+
+            //alert ("O resultado é " + produto); (As variáveis já form declradas por isso se excluiu este "alert")
+
+        function dividir () {
+            coletar();
+            let divisao = n1 / n2;
+            
+            saida(divisao);
+
+            }
+
+            //alert ("O resultado ´´e " + divisão); (As variáveis já form declradas por isso se excluiu este "alert")
+
+
+    </script>
+</head>
+<body>
+    <form>
+         <input type = "number" name= "n1" id="n1" />
+         <input type = "number" name= "n2" id="n2" />
+         <input type = "button" value= "Somar"
+            onclick = "somar ()" />
+            <input type="button" value="Subtração"
+            onclick = "subtrair ()" />
+            <input type="button" value="Multiplicação"
+            onclick = "multiplicar ()" />
+            <input type="button" value="Divisão"
+            onclick = "dividir ()" />
+
+            <div id ="resultado"></div>
+
+</form>
+</body>
+</html>

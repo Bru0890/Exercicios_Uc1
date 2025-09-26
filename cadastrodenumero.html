@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*Crie uma página onde terá um formulário com uma caixa de texto que irá receber
+    apenas números e um botão com o texto "Gravar" onde números serão armazendos em um vetor
+
+    Na mesma página, crie um botão com o texto "Somatório".     uando o usuário clicar nesse
+    botão, a página exibirá o smatório dos elementos.
+
+    Crie um botão com o texto "Média". Quando o usuário clicar nesse botão, a página exibirá a
+    média dos elementos.*/
+    
+    let numero=[];
+        
+    function cadastrar() {
+            let n = parseInt(document.getElementById("numero").value);
+            numeros.push(n);
+
+            document.getElementById("numero").value = "";
+            let result = document.getElementById("resultado");
+            result.innerHTML = saida();
+
+            function saida(){
+                let retorno = "";
+                for (let x=0; x < numero.length; x = x + 1) {
+                    retorno += numeros [x] + "</br>";
+                }
+                return retorno;
+            }
+    }
+</script>
+    </head>
+        </body>
+            <form>
+                <input>

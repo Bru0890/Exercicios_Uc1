@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+    //Uma empresa deseja fazer o censo da idade dos habitantes, para isso necessita de um programa que fará a leitura dessas idades.
+    //Deverá sempre perguntar se o usuário deseja continuar cadastrando essas idades.
+    //Caso a resposta seja não, o programa final deverá informar a quantiade de idades lidas, a quantidade de idades de pessoas acima dos
+    //18 anos e a média de todas as idades.
+
+    let qtdeTotal = 0;
+    let qtdeMaior18 = 0;
+    let somaIdade = 0;
+    let media = 0;
+    
+   while (true) {
+        let idade = parseInt(prompt("Informe a idade "));
+        qtdeTotal = qtdeTotal + 1;
+        somaIdade = somaIdade + idade;
+        media = somaIdade / qtdeTotal;
+
+        if (idade >= 18) {
+            qtdeMaior18 = qtdeMaior18 + 1;
+        }
+        let r = prompt("Deseja continuar? (s/n)")
+        if (r.substring(0,1).toLowerCase() == 'n'){
+            break;
+       }
+   }
+    alert("Quantidade de pessoas informadas: "
+    + qtdeTotal +"\nQuantidade de pessoas mmaiores de 18 anos: "
+    + qtdeMaior18 + "\nA média das idades é: "
+    + media);
+    </script>   
+</body>
+</html>

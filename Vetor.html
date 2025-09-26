@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor</title>
+    <script>
+        let contatos=[]; //criando o vetor array
+        function gravar() {
+            let nome= document.getElementById("nome").value;
+            contatos.push(nome); //Adicionando elemento
+            let result = document.getElementById("resultado");
+            //alert(contatos[0]); //Primeira posição do vetor
+            document.getElementById("nome").value = "";
+            contatos[0] = "Qualquercoisa";
+            result.innerHTML = saida();
+
+        }
+
+        function saida() {
+            let retorno = "";
+            for(let i=0; i < contatos.length; i= i + 1) {
+                retorno += contatos[i] + "</br>";
+                //retorno = retorno + contatos[i] + "</br>";
+            }
+
+            return retorno;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <div align="center">
+        <input type='text' id="nome" name="nome"
+            value=""
+            placeholder="Informe o nome" />
+        <input type='button' value="Gravar"
+            onclick="gravar()" />
+    </div>
+        <div id="resultado"></div>
+    </form> 
+</body>
+</html>

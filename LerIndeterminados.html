@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Ler INDETERMINADOS números e exibir a soa
+        //A cada iteração, o prgrama perguntará se o
+        //usuário deseja continuar, se a resposta for
+        //'n', o programa interromperá a leitura.
+
+        let soma= 0;
+        let r = "";
+        do{
+            let n =  parseInt(prompt("Informe o número"));
+            soma = soma + n;
+            r = promp("Deseja continuar? s/n");
+        }
+        while (r == "s" || r == "S")
+        alert("A soma é: " + soma);
+
+    </script>
+</body>
+</html>
